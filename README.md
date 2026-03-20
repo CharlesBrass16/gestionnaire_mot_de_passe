@@ -26,4 +26,16 @@ La clé de protection est générée à partir d’un secret (un mot de passe) d
 
   Les mots de passe qui restent chiffrés et afficherons "*****" à leurs places
 
+  l’option -d suivie du mot de passe de la trousse permet d’afficher une ligne particulière tout en déchiffrant certains champs
+  de plus. 
+  
+  Le numéro de la ligne est spécifié avec l’option -i. Si nous voulons déchiffrer le nom, nous le spécifions avec
+  le champ -user et si nous voulons déchiffrer le mot de passe, nous le spécifions avec l’option -pwd. Autrement, ces
+  informations restent chiffrées.
 
+
+Un exemple: gestionnaire_mot_de_passe.py -d 123pwd -i 2 -pwd
+
+ligne       url           user       pwd
+
+  2     www.gmail.com     *****      5ewr1
