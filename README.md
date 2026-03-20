@@ -25,10 +25,12 @@ gestionnaire_mot_de_passe.py -a 123pwd -url www.facebook.com -user alice@gmail.c
 
 Exemple de commande :
 gestionnaire_mot_de_passe.py -l 123pwd
+
 Exemple de résultats.
-ligne url user pwd
-1 www.facebook.com ***** *****
-2 www.gmail.com ***** *****
+
+ligne       url              user         pwd
+1       www.facebook.com    *****        *****
+2       www.gmail.com       *****        *****
 
 — l’option -d suivie du mot de passe de la trousse permet d’afficher une ligne particulière tout en déchiffrant certains champs de plus. Le numéro de la ligne est spécifié avec l’option -i. Si nous voulons déchiffrer le nom, nous le spécifions avec le champ -user et si nous voulons déchiffrer le mot de passe, nous le spécifions avec l’option -pwd. Autrement, ces informations restent chiffrées. L’exemple suivant permet d’afficher le contenu de toute la ligne numéro 1 en clair :
 
@@ -36,11 +38,12 @@ gestionnaire_mot_de_passe.py -d 123pwd -i 1 -user -pwd
 
 Exemple de résultats.
 
-ligne url user pwd
-1 www.facebook.com alice@gmail.com 12t3r
+ligne         url                 user            pwd
+1       www.facebook.com      alice@gmail.com    12t3r
 
 Un autre exemple 
 
 gestionnaire_mot_de_passe.py -d 123pwd -i 2 -pwd
-ligne url user pwd
-2 www.gmail.com ***** 5ewr1
+
+ligne         url          user        pwd
+2       www.gmail.com     *****       5ewr1
