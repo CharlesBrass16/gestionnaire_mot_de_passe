@@ -18,32 +18,8 @@ La clé de protection est générée à partir d’un secret (un mot de passe) d
   -url : donne l’URL.
   -user : donne le nom d’utilisateur (username).
   -pwd : donne le mot de passe permettant d’accéder au service.
+  -l suivie du mot de passe de la trousse permet des lister les enregistrements. L’affichage commence par une ligne indiquant le contenu de chaque colonne. Chaque enregistrement est précédé par un numéro de ligne.
 
-Exemple :
-gestionnaire_mot_de_passe.py -a 123pwd -url www.facebook.com -user alice@gmail.com -pwd 12t3r
-— l’option -l suivie du mot de passe de la trousse permet des lister les enregistrements. L’affichage commence par une ligne indiquant le contenu de chaque colonne. Chaque enregistrement est précédé par un numéro de ligne. Tout doit apparaitre en clair sauf les noms d’utilisateurs et leurs mots de passe qui restent chiffrés et nous affichons "*****" à leurs places.
+  Les mots de passe qui restent chiffrés et afficherons "*****" à leurs places
 
-Exemple de commande :
-gestionnaire_mot_de_passe.py -l 123pwd
 
-Exemple de résultats.
-
-ligne       url              user         pwd
-1       www.facebook.com    *****        *****
-2       www.gmail.com       *****        *****
-
-— l’option -d suivie du mot de passe de la trousse permet d’afficher une ligne particulière tout en déchiffrant certains champs de plus. Le numéro de la ligne est spécifié avec l’option -i. Si nous voulons déchiffrer le nom, nous le spécifions avec le champ -user et si nous voulons déchiffrer le mot de passe, nous le spécifions avec l’option -pwd. Autrement, ces informations restent chiffrées. L’exemple suivant permet d’afficher le contenu de toute la ligne numéro 1 en clair :
-
-gestionnaire_mot_de_passe.py -d 123pwd -i 1 -user -pwd
-
-Exemple de résultats.
-
-ligne         url                 user            pwd
-1       www.facebook.com      alice@gmail.com    12t3r
-
-Un autre exemple 
-
-gestionnaire_mot_de_passe.py -d 123pwd -i 2 -pwd
-
-ligne         url          user        pwd
-2       www.gmail.com     *****       5ewr1
